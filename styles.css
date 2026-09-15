@@ -443,13 +443,18 @@ a:focus-visible,button:focus-visible{outline:2px solid var(--pink);outline-offse
 
 .card{
   border:1px solid var(--ink);
+  border-top:5px solid var(--pink);
   background:var(--paper-2);
   display:flex;
   flex-direction:column;
   text-decoration:none;
   transition:transform .16s ease, box-shadow .16s ease;
 }
-.card:hover{transform:translate(-3px,-3px);box-shadow:6px 6px 0 var(--blue);}
+.card:has(.badge[data-cat="motion"]){border-top-color:var(--blue);}
+.card:has(.badge[data-cat="photo"]){border-top-color:var(--yellow);}
+.card:hover{transform:translate(-3px,-3px);box-shadow:6px 6px 0 var(--pink);}
+.card:has(.badge[data-cat="motion"]):hover{box-shadow:6px 6px 0 var(--blue);}
+.card:has(.badge[data-cat="photo"]):hover{box-shadow:6px 6px 0 var(--yellow);}
 @media (prefers-reduced-motion: reduce){ .card{transition:none;} .card:hover{transform:none;box-shadow:none;border-color:var(--blue);} }
 
 .thumb{
@@ -494,18 +499,17 @@ a:focus-visible,button:focus-visible{outline:2px solid var(--pink);outline-offse
   position:absolute;
   left:0;bottom:0;
   z-index:3;
-  background:var(--ink);
-  color:var(--paper-2);
+  background:var(--pink);
+  color:var(--ink);
   font-family:'Courier Prime', monospace;
   font-weight:700;
-  font-size:10.5px;
+  font-size:11px;
   letter-spacing:0.12em;
   text-transform:uppercase;
-  padding:5px 11px;
-  border-top:2px solid var(--pink);
+  padding:6px 13px;
 }
-.thumb .badge[data-cat="motion"]{border-top-color:var(--blue);}
-.thumb .badge[data-cat="photo"]{border-top-color:var(--yellow);}
+.thumb .badge[data-cat="motion"]{background:var(--blue); color:var(--paper-2);}
+.thumb .badge[data-cat="photo"]{background:var(--yellow); color:var(--ink);}
 .t-blue{background-image:linear-gradient(148deg, var(--blue), color-mix(in srgb, var(--blue) 35%, var(--paper-3)));}
 .t-pink{background-image:linear-gradient(148deg, var(--pink), color-mix(in srgb, var(--pink) 30%, var(--paper-3)));}
 .t-duo {background-image:linear-gradient(128deg, var(--blue) 8%, var(--pink) 92%);}

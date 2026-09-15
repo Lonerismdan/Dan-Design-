@@ -472,18 +472,40 @@ a:focus-visible,button:focus-visible{outline:2px solid var(--pink);outline-offse
   text-align:center;
   padding:0 16px;
 }
+/* registration / crop marks — print-proof corners on every image */
+.thumb::before{
+  content:"";
+  position:absolute;
+  inset:7px;
+  z-index:2;
+  pointer-events:none;
+  background-image:
+    radial-gradient(circle, var(--paper-2) 1.6px, transparent 1.7px),
+    radial-gradient(circle, var(--paper-2) 1.6px, transparent 1.7px),
+    radial-gradient(circle, var(--paper-2) 1.6px, transparent 1.7px),
+    radial-gradient(circle, var(--paper-2) 1.6px, transparent 1.7px);
+  background-position: 0 0, 100% 0, 0 100%, 100% 100%;
+  background-repeat:no-repeat;
+  background-size:4px 4px;
+  mix-blend-mode:var(--blend);
+  opacity:0.85;
+}
 .thumb .badge{
   position:absolute;
   left:0;bottom:0;
-  z-index:2;
+  z-index:3;
   background:var(--ink);
   color:var(--paper-2);
   font-family:'Courier Prime', monospace;
-  font-size:10px;
-  letter-spacing:0.1em;
+  font-weight:700;
+  font-size:10.5px;
+  letter-spacing:0.12em;
   text-transform:uppercase;
-  padding:4px 9px;
+  padding:5px 11px;
+  border-top:2px solid var(--pink);
 }
+.thumb .badge[data-cat="motion"]{border-top-color:var(--blue);}
+.thumb .badge[data-cat="photo"]{border-top-color:var(--yellow);}
 .t-blue{background-image:linear-gradient(148deg, var(--blue), color-mix(in srgb, var(--blue) 35%, var(--paper-3)));}
 .t-pink{background-image:linear-gradient(148deg, var(--pink), color-mix(in srgb, var(--pink) 30%, var(--paper-3)));}
 .t-duo {background-image:linear-gradient(128deg, var(--blue) 8%, var(--pink) 92%);}

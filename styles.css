@@ -12,7 +12,7 @@
   --line-soft: #201F1B;
   --fg:        #F4F2EA;
   --fg-dim:    #ACA99D;
-  --fg-mute:   #706D62;
+  --fg-mute:   #86837A;
   --white:     #FFFFFF;
 }
 
@@ -92,9 +92,11 @@ a:focus-visible,button:focus-visible,summary:focus-visible{outline:1px solid var
   text-transform:uppercase;
   text-decoration:none;
   color:var(--fg-dim);
-  padding:2px 0;
+  padding:12px 6px;
+  margin:-12px -6px;
   border-bottom:1px solid transparent;
   transition:color .16s, border-color .16s;
+  display:inline-block;
 }
 .topnav a:hover{color:var(--fg);border-bottom-color:var(--fg);}
 @media (max-width:700px){ .topnav a:nth-child(n+4){display:none;} }

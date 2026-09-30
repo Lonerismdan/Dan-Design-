@@ -73,7 +73,8 @@ a:focus-visible,button:focus-visible,summary:focus-visible{outline:1px solid var
   align-items:center;
   justify-content:space-between;
   gap:16px;
-  padding:16px 0;
+  padding-top:16px;
+  padding-bottom:16px;
 }
 .topbar .mark{
   font-family:'Archivo', sans-serif;
@@ -228,7 +229,7 @@ a:focus-visible,button:focus-visible,summary:focus-visible{outline:1px solid var
 @media (prefers-reduced-motion: reduce){ .ribbon-track{animation:none;} }
 
 /* ---------- about / statement ---------- */
-.about{padding:clamp(48px,8vw,96px) 0;border-bottom:1px solid var(--line);}
+.about{padding-block:clamp(48px,8vw,96px);border-bottom:1px solid var(--line);}
 .about-grid{
   display:grid;
   grid-template-columns:0.9fr 1.1fr;
@@ -261,7 +262,7 @@ a:focus-visible,button:focus-visible,summary:focus-visible{outline:1px solid var
 }
 
 /* ---------- contents / index ---------- */
-.contents{border-bottom:1px solid var(--line);padding:clamp(24px,4vw,40px) 0;}
+.contents{border-bottom:1px solid var(--line);padding-block:clamp(24px,4vw,40px);}
 .sec-head{
   display:flex;
   align-items:baseline;
@@ -355,7 +356,7 @@ a:focus-visible,button:focus-visible,summary:focus-visible{outline:1px solid var
 .card-body p{font-size:12.5px;color:var(--fg-mute);margin:0;line-height:1.6;letter-spacing:0.005em;}
 
 /* ---------- pull quote ---------- */
-.quote{padding:clamp(40px,6.5vw,76px) 0;border-bottom:1px solid var(--line);text-align:center;}
+.quote{padding-block:clamp(40px,6.5vw,76px);border-bottom:1px solid var(--line);text-align:center;}
 .quote blockquote{
   margin:0 auto;
   max-width:24ch;
@@ -403,7 +404,7 @@ a:focus-visible,button:focus-visible,summary:focus-visible{outline:1px solid var
 @media (prefers-reduced-motion: reduce){ .stage-icon::before,.stage-icon::after{transition:none;} }
 
 /* ---------- closing / footer ---------- */
-.closing{padding:clamp(56px,9vw,110px) 0 clamp(32px,5vw,48px);}
+.closing{padding-block:clamp(56px,9vw,110px) clamp(32px,5vw,48px);}
 .closing-head{max-width:60ch;margin-bottom:clamp(40px,6vw,64px);}
 .closing-head .dots{margin-bottom:14px;}
 .closing-head h2{

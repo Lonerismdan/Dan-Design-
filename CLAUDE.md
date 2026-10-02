@@ -43,6 +43,11 @@ Motion & Film uses `.grid.wide` (wider min column) since video thumbnails read b
 ### Visual system (`styles.css`)
 Dark/monochrome only — no light mode, no color accents beyond what's in the actual photos/artwork. Type is Archivo (headlines/UI, weight 900 for bold display type) and Courier Prime (`.mono` class — small labels, meta lines, nav). CSS custom properties (`--bg`, `--fg`, `--fg-dim`, `--fg-mute`, `--line`, etc.) live in `:root` at the top of `styles.css` — change the palette there, not per-component. Thumbnails intentionally show full color (an earlier grayscale-by-default/color-on-hover treatment was removed at the user's request).
 
+### Gotchas that have already bitten once
+- **Never set a `padding: X 0` shorthand on an element that also has the `.sheet` class** (in CSS or inline `style`). It zeroes `.sheet`'s horizontal gutter and the content bleeds to the screen edge. Use `padding-block` instead. This broke the topbar, About, Contents, Quote, Closing, and Services sections before it was caught.
+- **`og:url` / `og:image` in `<head>` are absolute `lonerismdan.github.io/Dan-Design-/` URLs** (link-preview scrapers require absolute URLs). If a custom domain is connected, update them. `images/og-image.jpg` is the 1200x630 preview card.
+- Bump the `styles.css?v=N` query string in `index.html` when changing CSS, otherwise browsers/Pages can serve the old stylesheet.
+
 ### Adding a new project card
 1. Drop the image in `images/` (lowercase, dash-separated filename) or video in `videos/` (+ a poster image in `images/`).
 2. Copy the nearest matching existing `.card` block in the relevant `.dept` section and edit the `src`, `alt`, `.meta`, `<h4>`, and `<p>` in place.

@@ -372,6 +372,9 @@ a:focus-visible,button:focus-visible,summary:focus-visible{outline:1px solid var
 .quote .attrib{margin-top:16px;color:var(--fg-mute);}
 
 /* ---------- stage-list (accordion services) ---------- */
+.services{padding-block:clamp(24px,4vw,40px);}
+.quote-note{margin:clamp(18px,3vw,28px) 0 0;color:var(--fg-mute);font-size:13.5px;max-width:60ch;}
+.quote-note .link-arrow{display:block;width:fit-content;margin-top:12px;}
 .stage-list{border-top:1px solid var(--line);}
 .stage{border-bottom:1px solid var(--line-soft);}
 .stage summary{
@@ -417,6 +420,7 @@ a:focus-visible,button:focus-visible,summary:focus-visible{outline:1px solid var
   margin-bottom:16px;
 }
 .closing-head p{color:var(--fg-dim);font-size:15px;max-width:52ch;margin:0;}
+.closing-head .cta-row{margin-top:clamp(20px,3vw,28px);}
 
 .footer-grid{
   display:grid;

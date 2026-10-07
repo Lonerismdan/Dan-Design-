@@ -247,7 +247,6 @@ a:focus-visible,button:focus-visible,summary:focus-visible{outline:1px solid var
 .about-lede .dots{margin-bottom:14px;}
 .about-body{color:var(--fg-mute);font-size:14px;line-height:1.65;}
 .about-body p{max-width:56ch;}
-.about-body .note{color:var(--fg-mute);font-size:11px;}
 .link-arrow{
   display:inline-block;
   margin-top:6px;
@@ -450,3 +449,10 @@ a:focus-visible,button:focus-visible,summary:focus-visible{outline:1px solid var
   flex-wrap:wrap;
   color:var(--fg-mute);
 }
+
+/* ---------- about facts + linked thumbs ---------- */
+.facts{list-style:none;margin:20px 0 22px;padding:0;border-top:1px solid var(--line);}
+.facts li{display:flex;gap:16px;padding:12px 0;border-bottom:1px solid var(--line-soft);font-size:13.5px;color:var(--fg-dim);}
+.facts .lbl{width:88px;flex:none;color:var(--fg-mute);}
+.about-body strong{color:var(--fg);font-weight:600;}
+.thumb a{display:block;width:100%;height:100%;}
